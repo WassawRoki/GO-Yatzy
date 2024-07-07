@@ -4,16 +4,16 @@ import (
 	"math/rand"
 )
 
-type StandardDice struct {
-	Sides  int
-	Result int
-}
-
 func CreateOneDice(sides int) *StandardDice {
 	// Initialize a new dice with a given number of sides
 	dice := &StandardDice{Sides: sides}
 	dice.Roll()
 	return dice
+}
+
+type StandardDice struct {
+	Sides  int
+	Result int
 }
 
 func (dice *StandardDice) Roll() *StandardDice {
